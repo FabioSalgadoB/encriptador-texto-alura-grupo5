@@ -1,0 +1,232 @@
+body {
+  position: relative;
+  background: linear-gradient(#fefefe, #01213dab);
+  width: 1440px;
+}
+.titulo {
+  position: absolute;
+  text-align: center;
+  top: 20px;
+  margin-bottom: 10px;
+  left: 540px;
+  font-size: 24px;
+  font-family: sans-serif;
+  color: #5d6d7e;
+  font-weight: bold;
+}
+.contenido-encabezado,
+.logo {
+  position: absolute;
+  width: 120px;
+  height: 48px;
+  margin-top: 25px;
+  animation-name: logo;
+  animation-duration: 2s;
+}
+
+@keyframes logo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Contenido principal parte 1 */
+.contenido-principal {
+  margin: 0 auto;
+}
+.principal-1 {
+  width: 700px;
+  height: 650px;
+  /* background: blue; */
+}
+.caja-texto1 {
+  position: absolute;
+  left: 270px;
+  top: 168px;
+}
+
+.input-texto1 {
+  width: 450px;
+  height: 48px;
+  font-size: x-large;
+  font-family: sans-serif;
+  font-weight: normal;
+  border: none;
+  background-color: #d6dbdf;
+}
+.caja-exclamacion {
+  position: absolute;
+  left: 270px;
+  top: 545px;
+}
+
+.texto-exclamacion {
+  font-family: sans-serif;
+  font-size: 12px;
+}
+.caja-button {
+  position: absolute;
+  left: 270px;
+  top: 575px;
+}
+
+.button {
+  border-radius: 8px;
+  border: none;
+  width: 250px;
+  height: 40px;
+  font-family: sans-serif;
+  font-size: 22px;
+  margin: 0 0 0 8px;
+  cursor: pointer;
+}
+
+#button1 {
+  background: #4d5656;
+  transition-duration: 0.4s;
+  color: #aaa;
+  border: 1px solid orange;
+}
+
+#button1:hover {
+  background-color: #5d6d7e;
+  color: white;
+  width: 270px;
+  box-shadow: 0px 0px 8px 8px rgba(black);
+}
+#button2 {
+  background: #7b7d7d;
+  color: #aaa;
+  transition-duration: 0.4s;
+  border: 1px solid orange;
+}
+
+#button2:hover {
+  background-color: #5d6d7e;
+  color: white;
+  width: 270px;
+}
+
+#button3 {
+  position: absolute;
+  background: #4d5656;
+  color: #aaa;
+  transition-duration: 0.4s;
+  top: 570px;
+  right: 50px;
+  display: none;
+  border: 1px solid orange;
+}
+
+#button3:hover {
+  background-color: #5d6d7e;
+  color: white;
+  width: 270px;
+}
+/* Contenido principal parte 2 */
+.caja-muneco {
+  position: absolute;
+  width: 340px;
+  height: 650px;
+  left: 1000px;
+  bottom: 0px;
+  background: #fbfcfc;
+  border-radius: 10px;
+}
+
+.caja-texto-encriptado {
+  position: absolute;
+  width: 330px;
+  left: 35px;
+  top: 20px;
+}
+#texto-encriptado {
+  top: 30px;
+  font-size: 24px;
+  text-align: center;
+  font-family: sans-serif;
+  border: none;
+  display: none;
+}
+#texto-muneco1 {
+  position: absolute;
+  display: inline-block;
+  top: 500px;
+  right: 10px;
+  font-size: 24px;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+#texto-muneco2 {
+  position: absolute;
+  display: inline-block;
+  top: 550px;
+  right: 10px;
+  font-size: 18px;
+  text-align: center;
+  font-family: sans-serif;
+  margin-top: 20px;
+}
+
+/* ventana modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.contenido {
+  background-color: #fefefe;
+  margin: 300px auto;
+  border: 1.5px solid #2e9800;
+  border-radius: 10px;
+  width: 20%;
+  text-align: center;
+  font-family: sans-serif;
+  padding: 20px;
+  color: #888;
+}
+
+.contenido h2 {
+  margin: 15px;
+  font-weight: bold;
+  color: #888;
+  transition: 2s all;
+  animation-name: modal;
+  animation-duration: 2s;
+}
+.contenido h2:hover {
+  transform: scale(1.3);
+}
+
+@keyframes modal {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.3);
+  }
+}
+.cerrar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: 1s;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+  transform: scale(1.2);
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

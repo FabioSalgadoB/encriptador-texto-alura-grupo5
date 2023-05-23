@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Encriptador de texto</title>
+     <link rel="stylesheet" href="./assets/css/reset.css">
+     <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+
+     <header>
+          <div class="contenido-encabezado">
+               <img class="logo" src="./assets/images/Logo.png" alt="logo-pagina">
+
+          </div>
+          <h1 class="titulo">Encriptador de texto</h1>
+     </header>
+
+     <main class="contenido-principal">
+          <div>
+               <section class="principal-1">
+                    <div class="caja-texto1">
+                         <input id="ingresar-texto" class="input-texto1" type="text" placeholder="Ingrese el texto aqui"
+                              required>
+                    </div>
+
+                    <div class="caja-exclamacion">
+                         <img src="./assets/images/bi_exclamation-circle-fill.png" alt="circulo-exclamacion">
+                         <label for="text" class="texto-exclamacion">solo letras minusculas y sin acentos</label>
+                    </div>
+
+                    <div class="caja-button">
+                         <button id="button1" class="button" value="Encriptar">Encriptar</button>
+                         <button id="button2" class="button" value="Desencriptar">Desencriptar</button>
+
+                    </div>
+
+               </section>
+
+               <section class="principal-2">
+                    <div class="caja-muneco">
+                         <div class="caja-texto-encriptado">
+                              <textarea name="" id="texto-encriptado" cols="20" rows="10"></textarea>
+                         </div>
+                         <img id="muneco" src="./assets/images/Muñeco.png" alt="muneco">
+                         <label for="text" id="texto-muneco1" class="textos">Ningun mensaje ha sido encontrado!</label>
+                         <label for="text" id="texto-muneco2" class="textos">Ingrese el texto a encriptar o
+                              desencriptar</label>
+                         <button id="button3" class="button" value="Copiar">Copiar</button>
+                    </div>
+
+               </section>
+
+               <section>
+                    <div id="myModal" class="modal">
+                         <div class="contenido">
+                              <span class="cerrar">&times;</span>
+                              <h2>Verificar</h2>
+                              <p>Por favor debe ingresar texto antes de encriptar o desencriptar!</p>
+                         </div>
+                    </div>
+               </section>
+          </div>
+
+     </main>
+
+     <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
