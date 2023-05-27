@@ -384,3 +384,66 @@ footer {
   padding: 30px;
   font-size: 20px;
 }
+
+/* Diseño responsi */
+@media screen and (max-width: 480px) {
+  .caja-logo-titulo {
+    width: 480px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .caja-logo-titulo img {
+    width: 30%;
+    padding-top: 10px;
+  }
+  .titulo {
+    font-size: 22px;
+  }
+
+  .container-main {
+    width: 480px;
+  }
+  #mensaje-informativo {
+    text-align: center;
+  }
+
+  .caja-ingresar-texto {
+    left: 40px;
+    padding: 15px 0;
+  }
+
+  .caja-texto-encriptado {
+    left: 40px;
+  }
+  .caja-button {
+    width: 340px;
+    flex: 1;
+  }
+  .button {
+    width: 95px;
+    height: 30px;
+    margin: 5px;
+    border: 1px solid orange;
+    border-radius: 6px;
+    background-color: #1c2833;
+    color: orange;
+    transition: 0.7s ease-in-out 0s;
+    position: relative;
+    left: 8px;
+  }
+  .button:hover {
+    width: 110px;
+    background-color: orange;
+    color: #1c2833;
+    border: 1px solido #1c2833;
+  }
+  .contenido-footer {
+    width: 385px;
+    padding: 0;
+    margin: 0;
+  }
+  .contenido-footer p {
+    font-size: 16px;
+  }
+}
