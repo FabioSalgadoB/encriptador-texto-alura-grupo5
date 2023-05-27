@@ -393,7 +393,7 @@ footer {
     box-sizing: border-box;
   }
   .caja-logo-titulo {
-    width: 490px;
+    width: auto;
     box-sizing: border-box;
   }
 
@@ -408,7 +408,7 @@ footer {
   .container-main {
     display: flex;
     justify-content: center;
-    width: 480px;
+    width: auto;
     box-sizing: border-box;
     position: relative;
   }
@@ -448,7 +448,7 @@ footer {
     border: 1px solido #1c2833;
   }
   .contenido-footer {
-    width: 375px;
+    width: auto;
     box-sizing: border-box;
   }
 
