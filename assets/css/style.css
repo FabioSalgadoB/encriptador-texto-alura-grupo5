@@ -1,4 +1,4 @@
-body {
+/* body {
   position: relative;
   background: linear-gradient(#fefefe, #01213dab);
   width: 1440px;
@@ -32,14 +32,12 @@ body {
     transform: rotate(360deg);
   }
 }
-/* Contenido principal parte 1 */
 .contenido-principal {
   margin: 0 auto;
 }
 .principal-1 {
   width: 700px;
   height: 650px;
-  /* background: blue; */
 }
 .caja-texto1 {
   position: absolute;
@@ -125,7 +123,6 @@ body {
   color: white;
   width: 270px;
 }
-/* Contenido principal parte 2 */
 .caja-muneco {
   position: absolute;
   width: 340px;
@@ -171,7 +168,6 @@ body {
   margin-top: 20px;
 }
 
-/* ventana modal */
 .modal {
   display: none;
   position: fixed;
@@ -229,4 +225,162 @@ body {
   color: black;
   text-decoration: none;
   cursor: pointer;
+} */
+
+/* Seccion para el header */
+html body {
+  font-family: "Great Vibes", cursive;
+  font-family: "Kalam", cursive;
+  font-family: "Montserrat", sans-serif;
+}
+header {
+  display: flex;
+  width: 96%;
+  height: 15%;
+  justify-content: center;
+  padding: 0 2%;
+  position: relative;
+}
+
+.caja-logo-titulo {
+  background: #d0d3d4;
+  display: flex;
+  width: 960px;
+  padding-top: 20px;
+  justify-content: center;
+}
+.logo {
+  flex: 1;
+  padding-bottom: 10px;
+}
+.titulo {
+  flex: 1;
+  text-align: center;
+  display: inline-block;
+  color: #1c2833;
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  top: 40%;
+}
+/* Seccion para el main */
+main {
+  display: flex;
+  justify-content: center;
+  width: 96%;
+  height: 70%;
+  padding: 0 2%;
+}
+.container-main {
+  background-color: #17202a;
+  border-top: 2px solid orange;
+  border-bottom: 2px solid orange;
+  display: flex;
+  flex: 1;
+  max-width: 960px;
+  height: 750px;
+  justify-content: center;
+
+  position: relative;
+}
+
+#mensaje-informativo {
+  position: absolute;
+  top: 20px;
+  font-size: 20px;
+  color: aliceblue;
+}
+.caja-ingresar-texto {
+  flex: 1;
+  position: absolute;
+  left: 330px;
+  top: 45px;
+}
+#input-ingresar-texto {
+  width: 300px;
+  height: 25px;
+  font-size: 22px;
+  margin-top: 20px;
+  position: absolute;
+  border-radius: 6px;
+  border: 2px solid orange;
+}
+
+.caja-texto-encriptado {
+  flex: 1;
+  position: absolute;
+  left: 330px;
+  top: 150px;
+}
+
+#input-texto-encriptado {
+  width: 300px;
+  height: 400px;
+  border-radius: 10px;
+  border: 2px solid orange;
+  font-size: 22px;
+  text-align: center;
+}
+
+.caja-normas {
+  position: absolute;
+  top: 600px;
+  color: aliceblue;
+}
+.caja-button {
+  position: absolute;
+  top: 640px;
+  padding: 10px;
+  border: 1px solid orange;
+  border-radius: 6px;
+}
+
+.button {
+  width: 150px;
+  height: 40px;
+  margin: 0 5px;
+  border: 1px solid orange;
+  border-radius: 6px;
+  background-color: #1c2833;
+  color: orange;
+  transition: 0.7s ease-in-out 0s;
+}
+
+.button:hover {
+  width: 180px;
+  background-color: orange;
+  color: #1c2833;
+  border: 1px solido #1c2833;
+}
+.muneco {
+  position: absolute;
+  top: 220px;
+}
+.modal {
+  display: none;
+}
+/* Seccio para el footer */
+footer {
+  background-color: greenyellow;
+  display: flex;
+  justify-content: center;
+  width: 96%;
+  padding: 0 2%;
+  font-size: 20px;
+}
+
+.contenido-footer {
+  flex: 1;
+  width: 960px;
+  text-align: center;
+  max-width: 960px;
+  height: 100px;
+  position: absolute;
+  background: #d0d3d4;
+  color: #1c2833;
+  font-weight: bold;
+}
+.contenido-footer p {
+  padding: 30px;
+  font-size: 20px;
 }

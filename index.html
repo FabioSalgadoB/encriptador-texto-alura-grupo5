@@ -8,68 +8,79 @@
      <title>Encriptador de texto</title>
      <link rel="stylesheet" href="./assets/css/reset.css">
      <link rel="stylesheet" href="./assets/css/style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kalam&family=Montserrat:wght@300&display=swap"
+          rel="stylesheet">
 </head>
 
 <body>
+     <div class="container">
+          <header class="cabecera">
+               <div class="caja-logo-titulo">
+                    <div class="logo">
+                         <img src="./assets/images/Logo.png" alt="logo-pagina">
+                    </div>
+                    <div class="titulo">
+                         <h1>Encriptador de texto</h1>
+                    </div>
+               </div>
 
+          </header>
 
-     <header>
-          <div class="contenido-encabezado">
-               <img class="logo" src="./assets/images/Logo.png" alt="logo-pagina">
+          <main class="contenido-principal">
 
-          </div>
-          <h1 class="titulo">Encriptador de texto</h1>
-     </header>
+               <div class="container-main">
 
-     <main class="contenido-principal">
-          <div>
-               <section class="principal-1">
-                    <div class="caja-texto1">
-                         <input id="ingresar-texto" class="input-texto1" type="text" placeholder="Ingrese el texto aqui"
-                              required>
+                    <div id="mensaje-informativo"><label for="text" id="texto-muneco2" class="textos">Ingrese el texto a
+                              encriptar o
+                              desencriptar</label></div>
+                    <div class="caja-ingresar-texto">
+                         <input id="input-ingresar-texto" class="input-texto1" type="text"
+                              placeholder="Ingrese el texto aqui" required>
                     </div>
 
-                    <div class="caja-exclamacion">
+                    <div class="caja-texto-encriptado">
+                         <textarea name="" id="input-texto-encriptado" cols="20" rows="10"
+                              placeholder="Ningun mensaje ha sido encontrado"></textarea>
+                    </div>
+
+                    <div class="caja-normas">
                          <img src="./assets/images/bi_exclamation-circle-fill.png" alt="circulo-exclamacion">
                          <label for="text" class="texto-exclamacion">solo letras minusculas y sin acentos</label>
                     </div>
 
                     <div class="caja-button">
-                         <button id="button1" class="button" value="Encriptar">Encriptar</button>
-                         <button id="button2" class="button" value="Desencriptar">Desencriptar</button>
-
+                         <button id="btn-encriptar" class="button" value="Encriptar">Encriptar</button>
+                         <button id="btn-desencriptar" class="button" value="Desencriptar">Desencriptar</button>
+                         <button id="btn-copiar" class="button" value="Copiar">Copiar</button>
                     </div>
 
-               </section>
+                    <div class="muneco"><img id="muneco" src="./assets/images/Muñeco.png" alt="muneco">
+                    </div>
 
-               <section class="principal-2">
-                    <div class="caja-muneco">
-                         <div class="caja-texto-encriptado">
-                              <textarea name="" id="texto-encriptado" cols="20" rows="10"></textarea>
+                    <section>
+                         <div id="myModal" class="modal">
+                              <div class="contenido">
+                                   <span class="cerrar">&times;</span>
+                                   <h2>Verificar</h2>
+                                   <p>Por favor debe ingresar texto antes de encriptar o desencriptar!</p>
+                              </div>
                          </div>
-                         <img id="muneco" src="./assets/images/Muñeco.png" alt="muneco">
-                         <label for="text" id="texto-muneco1" class="textos">Ningun mensaje ha sido encontrado!</label>
-                         <label for="text" id="texto-muneco2" class="textos">Ingrese el texto a encriptar o
-                              desencriptar</label>
-                         <button id="button3" class="button" value="Copiar">Copiar</button>
-                    </div>
+                    </section>
+               </div>
+          </main>
 
-               </section>
+          <footer>
+               <div class="contenido-footer">
+                    <p>&copy; Diseño elaborado por <span>Fabio Salgado </span></p>
+               </div>
 
-               <section>
-                    <div id="myModal" class="modal">
-                         <div class="contenido">
-                              <span class="cerrar">&times;</span>
-                              <h2>Verificar</h2>
-                              <p>Por favor debe ingresar texto antes de encriptar o desencriptar!</p>
-                         </div>
-                    </div>
-               </section>
-          </div>
+          </footer>
+     </div>
 
-     </main>
-
-     <script src="./assets/js/script.js"></script>
+     <!-- <script src="./assets/js/script.js"></script> -->
 </body>
+
 
 </html>
