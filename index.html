@@ -16,48 +16,48 @@
 
 <body>
      <div class="container">
-          <header class="cabecera">
+          <header id="cabecera">
                <div class="caja-logo-titulo">
-                    <div class="logo">
-                         <img src="./assets/images/Logo.png" alt="logo-pagina">
-                    </div>
-                    <div class="titulo">
-                         <h1>Encriptador de texto</h1>
-                    </div>
+
+                    <img src="./assets/images/Logo.png" alt="logo-pagina">
+
+                    <h1>Encriptador de texto</h1>
+
                </div>
 
           </header>
 
-          <main class="contenido-principal">
+          <main>
 
                <div class="container-main">
 
-                    <div id="mensaje-informativo"><label for="text" id="texto-muneco2" class="textos">Ingrese el texto a
+                    <div id="mensaje-informativo"><label for="text" id="texto-muneco2" class="textos">Ingrese el
+                              texto a
                               encriptar o
                               desencriptar</label></div>
-                    <div class="caja-ingresar-texto">
-                         <input id="input-ingresar-texto" class="input-texto1" type="text"
-                              placeholder="Ingrese el texto aqui" required>
-                    </div>
 
-                    <div class="caja-texto-encriptado">
-                         <textarea name="" id="input-texto-encriptado" cols="20" rows="10"
+                    <section id="encriptado">
+
+                         <input id="ingresar-texto" class="input-texto" type="text" placeholder="Ingrese el texto aqui"
+                              required>
+
+                         <textarea name="" id="input-texto-encriptado" class="input-texto" cols="20" rows="10"
                               placeholder="Ningun mensaje ha sido encontrado"></textarea>
-                    </div>
+
+                         <div id="muneco"><img id="muneco" src="./assets/images/Muñeco.png" alt="muneco">
+
+                    </section>
 
                     <div class="caja-normas">
                          <img src="./assets/images/bi_exclamation-circle-fill.png" alt="circulo-exclamacion">
                          <label for="text" class="texto-exclamacion">solo letras minusculas y sin acentos</label>
                     </div>
 
-                    <div class="caja-button">
+                    <section class="caja-button">
                          <button id="btn-encriptar" class="button" value="Encriptar">Encriptar</button>
                          <button id="btn-desencriptar" class="button" value="Desencriptar">Desencriptar</button>
                          <button id="btn-copiar" class="button" value="Copiar">Copiar</button>
-                    </div>
-
-                    <div class="muneco"><img id="muneco" src="./assets/images/Muñeco.png" alt="muneco">
-                    </div>
+                    </section>
 
                     <section>
                          <div id="myModal" class="modal">
@@ -72,7 +72,7 @@
           </main>
 
           <footer>
-               <div class="contenido-footer">
+               <div id="contenido-footer">
                     <p>&copy; Diseño elaborado por <span>Fabio Salgado </span></p>
                </div>
 
