@@ -1,9 +1,9 @@
 //Referencias HTML
-const btnEncriptar = document.querySelector("#button1");
-const btnDesencriptar = document.querySelector("#button2");
-const btnCopiar = document.querySelector("#button3");
+const btnEncriptar = document.querySelector("#btn-encriptar");
+const btnDesencriptar = document.querySelector("#btn-desencriptar");
+const btnCopiar = document.querySelector("#btn-copiar");
 const cajaTexto = document.querySelector("#ingresar-texto");
-const textoEncriptado = document.querySelector("#texto-encriptado");
+const textoEncriptado = document.querySelector("#input-texto-encriptado");
 const imgMuneco = document.querySelector("#muneco");
 const texto_muneco1 = document.querySelector("#texto-muneco1");
 const texto_muneco2 = document.querySelector("#texto-muneco2");
@@ -41,9 +41,12 @@ const desencriptarFrase = (palabra) => {
 
 //Esta funcion permite selecionar y copiar el texto
 const copiar = () => {
-  let contenido = document.querySelector("#texto-encriptado");
+  let contenido = document.querySelector("#input-texto-encriptado");
   contenido.select();
   document.execCommand("copy");
+  if (!cajaTexto.value) {
+    modal.style.display = "block";
+  }
 };
 
 //Acciones para el boton encriptar
@@ -52,7 +55,6 @@ btnEncriptar.addEventListener(
   (encriptar = () => {
     imgMuneco.style.display = "none";
     btnCopiar.style.display = "block";
-    texto_muneco1.style.display = "none";
     texto_muneco2.style.display = "none";
     textoEncriptado.style.display = "block";
     fraseEncriptar(cajaTexto.value);
