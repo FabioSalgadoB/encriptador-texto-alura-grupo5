@@ -5,10 +5,13 @@ const btnCopiar = document.querySelector("#btn-copiar");
 const cajaTexto = document.querySelector("#ingresar-texto");
 const textoEncriptado = document.querySelector("#input-texto-encriptado");
 const imgMuneco = document.querySelector("#muneco");
-const texto_muneco1 = document.querySelector("#texto-muneco1");
+const mensaje_uno = document.querySelector("#mensaje1");
+const mensaje_dos = document.querySelector("#mensaje2");
+const mensaje_tres = document.querySelector("#mensaje3");
 const texto_muneco2 = document.querySelector("#texto-muneco2");
 const modal = document.querySelector("#myModal");
 const btnCerrar = document.querySelector(".cerrar");
+const contenidoModal = document.querySelector("#contenido-modal");
 
 // Esta funcion realiza el proceso de encriptar la frase
 const fraseEncriptar = (palabra) => {
@@ -33,7 +36,6 @@ const desencriptarFrase = (palabra) => {
   palabra = palabra.replace(/ufat/gim, "u");
   console.log(palabra);
   textoEncriptado.innerHTML = palabra;
-
   if (!cajaTexto.value) {
     modal.style.display = "block";
   }
@@ -49,14 +51,32 @@ const copiar = () => {
   }
 };
 
+//validacion de texto
+// const validarTexto = (texto) => {
+//   if (texto.match(/[áéíóúÁÉÍÓÚ]/)) {
+//     modal.style.display = "block";
+//     contenidoModal.innerHTML = "El texto no debe incluir acentos";
+//   }
+//   // Verificar si el texto está en mayúsculas
+//   if (texto === texto.toUpperCase()) {
+//     modal.style.display = "block";
+//     contenidoModal.innerHTML = "El texto no debe incluir Mayusculas";
+//   }
+// };
 //Acciones para el boton encriptar
 btnEncriptar.addEventListener(
   "click",
   (encriptar = () => {
     imgMuneco.style.display = "none";
     btnCopiar.style.display = "block";
-    texto_muneco2.style.display = "none";
-    textoEncriptado.style.display = "block";
+
+    if (!cajaTexto.value) {
+      mensaje_dos.style.display = "none";
+    } else {
+      mensaje_uno.style.display = "none";
+      mensaje_dos.style.display = "block";
+    }
+    textoEncriptado.style.visibility = "visible";
     fraseEncriptar(cajaTexto.value);
   })
 );
@@ -65,6 +85,8 @@ btnEncriptar.addEventListener(
 btnDesencriptar.addEventListener(
   "click",
   (desencriptar = () => {
+    mensaje_dos.style.display = "none";
+    mensaje_tres.style.display = "block";
     desencriptarFrase(cajaTexto.value);
   })
 );
