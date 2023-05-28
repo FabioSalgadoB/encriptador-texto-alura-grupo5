@@ -178,7 +178,8 @@ footer {
     width: 100%;
   }
   #mensaje-informativo {
-    font-size: 13px;
+    font-size: 16px;
+    text-align: center;
   }
 
   #encriptador {
