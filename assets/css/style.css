@@ -358,6 +358,9 @@ main .container-main {
   cursor: pointer;
 }
 
+#myModal {
+  display: none;
+}
 footer {
   display: flex;
   flex-direction: row;
