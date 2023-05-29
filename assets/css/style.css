@@ -2,6 +2,7 @@ html body {
   font-family: "Great Vibes", cursive;
   font-family: "Kalam", cursive;
   font-family: "Montserrat", sans-serif;
+  background-color: #17202a;
 }
 
 #cabecera {
@@ -18,13 +19,16 @@ html body {
   align-items: center;
   width: 960px;
   background-color: aliceblue;
+  border: 3px solid #00ff00;
 }
-
 #cabecera h1 {
   font-size: 30px;
-  text-align: center;
+  font-weight: bold;
 }
 
+#cabecera img {
+  width: 7%;
+}
 main {
   display: flex;
   justify-content: center;
@@ -42,6 +46,7 @@ main .container-main {
   position: relative;
   border-top: 2px solid #00ff00;
   border-bottom: 2px solid #00ff00;
+  border: 3px solid #00ff00;
 }
 
 #mensaje-informativo {
@@ -161,7 +166,7 @@ main .container-main {
   text-align: center;
   border: 2px solid #00ff00;
   border-radius: 8px;
-  width: 60%;
+  width: 40%;
 }
 
 .contenido-modal h2 {
@@ -202,6 +207,7 @@ footer {
   align-items: center;
   width: 960px;
   height: 150px;
+  border: 3px solid #00ff00;
 }
 @media screen and (max-width: 480px) {
   body {

@@ -6,8 +6,6 @@ const cajaTexto = document.querySelector("#ingresar-texto");
 const textoEncriptado = document.querySelector("#input-texto-encriptado");
 const imgMuneco = document.querySelector("#muneco");
 const mensaje_uno = document.querySelector("#mensaje1");
-const mensaje_dos = document.querySelector("#mensaje2");
-const mensaje_tres = document.querySelector("#mensaje3");
 const texto_muneco2 = document.querySelector("#texto-muneco2");
 const modal = document.querySelector("#myModal");
 const btnCerrar = document.querySelector(".cerrar");
@@ -24,6 +22,8 @@ const fraseEncriptar = (palabra) => {
   textoEncriptado.innerHTML = palabra;
 
   if (!cajaTexto.value) {
+    contenidoModal.innerText =
+      "Debe existir texto antes de encriptar o desencriptar!";
     modal.style.display = "block";
   }
   validarTexto(cajaTexto.value);
@@ -38,6 +38,8 @@ const desencriptarFrase = (palabra) => {
   console.log(palabra);
   textoEncriptado.innerHTML = palabra;
   if (!textoEncriptado.value) {
+    contenidoModal.innerText =
+      "Debe existir texto antes de encriptar o desencriptar!";
     modal.style.display = "block";
   }
 };
@@ -47,30 +49,24 @@ const copiar = () => {
   let contenido = document.querySelector("#input-texto-encriptado");
   contenido.select();
   document.execCommand("copy");
-  if (!cajaTexto.value) {
-    modal.style.display = "block";
-  }
 };
 
 //validacion de texto
 const validarTexto = (texto) => {
-  if (texto.match(/[áéíóúÁÉÍÓÚ]/)) {
-    modal.style.display = "block";
-    contenidoModal.innerHTML =
-      "El texto no debe incluir acentos ni letras mayusculas";
-    textoEncriptado.innerHTML = " ";
-    mensaje_uno.style.display = "block";
-    mensaje_dos.style.display = "none";
-  }
   for (let i = 0; i < texto.length; i++) {
-    if (texto[i] === texto[i].toUpperCase()) {
+    if (texto[i] === texto[i].toUpperCase() || texto.match(/[áéíóúÁÉÍÓÚ]/)) {
       modal.style.display = "block";
       contenidoModal.innerHTML =
         "El texto no debe incluir acentos ni letras mayusculas";
       textoEncriptado.innerHTML = " ";
-      mensaje_uno.style.display = "block";
-      mensaje_dos.style.display = "none";
+      mensaje_uno.innerHTML = "No incluya acentos ni letras mayusculas!";
+      btnDesencriptar.disabled = true;
+      btnCopiar.disabled = true;
+    } else {
+      btnDesencriptar.disabled = false;
+      btnCopiar.disabled = false;
     }
+    return true;
   }
   return false;
 };
@@ -80,13 +76,12 @@ btnEncriptar.addEventListener(
   (encriptar = () => {
     imgMuneco.style.display = "none";
     if (!cajaTexto.value) {
-      mensaje_dos.style.display = "none";
+      mensaje_uno.innerHTML = "Debe ingresar texto antes de validar!";
     } else {
-      mensaje_uno.style.display = "none";
-      mensaje_dos.style.display = "block";
+      mensaje_uno.innerHTML = "Texto encriptado exitosamente!";
+      mensaje_uno.style.color = "#00ff00";
       textoEncriptado.style.visibility = "visible";
     }
-
     fraseEncriptar(cajaTexto.value);
   })
 );
@@ -96,13 +91,10 @@ btnDesencriptar.addEventListener(
   "click",
   (desencriptar = () => {
     if (!textoEncriptado.value) {
-      mensaje_uno.style.display = "block";
-      mensaje_dos.style.display = "none";
-      mensaje_tres.style.display = "none";
+      mensaje_uno.innerHTML = "Debe encriptar primero el texto!";
     } else {
-      mensaje_uno.style.display = "none";
-      mensaje_dos.style.display = "none";
-      mensaje_tres.style.display = "block";
+      mensaje_uno.innerHTML = "Texto desencriptado exitosamente!";
+      mensaje_uno.style.color = "#00ff00";
     }
     desencriptarFrase(cajaTexto.value);
   })
@@ -112,6 +104,10 @@ btnDesencriptar.addEventListener(
 btnCopiar.addEventListener(
   "click",
   (copiar_texto = () => {
+    if (!cajaTexto.value) {
+      contenidoModal.innerText = "Verifique que exista texto para copiar!";
+      modal.style.display = "block";
+    }
     copiar();
   })
 );
